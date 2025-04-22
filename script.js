@@ -35,7 +35,6 @@ const switchTo = (id) => {
 }
 
 (function() {
-    // https://dashboard.emailjs.com/admin/account
     emailjs.init({
       publicKey: 'LwBu1kSMnPSDQfHkB',
     });
@@ -46,7 +45,6 @@ window.onload = function() {
     const form = document.getElementById('survey')
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        // these IDs from the previous steps
         emailjs.sendForm('service_nxv08fu', 'template_05w109j', this)
             .then(() => {
                 console.log('SUCCESS!');
