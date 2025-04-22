@@ -13,15 +13,23 @@ const hide = (id) => {
     children[0].style.display = 'block'
 }
 
+const noShadow = (element) => {
+    element.classList.remove('shadow')
+}
+
+const shadow = (element) => {
+    element.classList.add('shadow')
+}
+
 let cur = 'home'
 const switchTo = (id) => {
     if(cur){
         document.getElementById(cur).style.display = "none"
-        document.getElementById(`title-${cur}`).classList.add("shadow")
+        shadow(document.getElementById(`title-${cur}`))
 
     }
     document.getElementById(id).style.display = "block"
-    document.getElementById(`title-${id}`).classList.remove("shadow")
+    noShadow(document.getElementById(`title-${id}`))
 
     cur = id
 }
