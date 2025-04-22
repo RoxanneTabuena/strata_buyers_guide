@@ -122,9 +122,6 @@ figure {
   text-align: left;
 }
 /* class styling */
-.mobile {
- border-radius: 20px;
-}
 
 .peers {
   display: flex;
@@ -196,6 +193,10 @@ figure {
   margin-bottom: 1em;
 }
 
+.mobile {
+  border-radius: 25px;
+}
+
 .titles {
   flex: 1;
   padding: .5rem;
@@ -209,7 +210,7 @@ figure {
 
 td {
   vertical-align: top;
-  /* padding: .5rem; */
+  padding: .5rem;
 }
 
 .options {
@@ -392,9 +393,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
   .banner {
-    width: 55vw;
     padding: 5em;
-    max-width: 878px;
   }
 
   .side {
@@ -473,7 +472,4 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0 4rem 2rem 4rem;
   }
 
-  #mobile-demo{
-    height: 30vh;
-  }
 }
