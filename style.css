@@ -1,0 +1,476 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4,h5, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  max-width: 1050px;
+  margin: auto;
+  background-color: white;
+  width: 100%;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+/* typography styling */
+
+h1, h2, h3, h4, h5, select, label, button {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 85%;
+    color: black;
+}
+
+p, td, input, textarea, figcaption, a {
+    font-family: "Walter Turncoat", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+a, td {
+    color:black;
+    text-decoration: none;
+}
+
+
+/* structure styling */
+section {
+  margin: 1em;
+  text-align: left;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: fit-content;
+}
+
+figure {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+/* class styling */
+.mobile {
+ border-radius: 20px;
+}
+
+.peers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.joint > article {
+  flex: 1;
+}
+.queue{
+  display: flex;
+  height: 70vh;
+  max-height: 70vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: 10px 10px 5px gainsboro;
+}
+
+.external {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+
+.external > a > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.x {
+  padding: 1rem;
+  height: fit-content
+}
+
+.x> h3{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.info {
+  margin-top: 2em;
+}
+.bullets,.info>p{
+  margin-left: 2em;
+}
+
+.share > div {
+  text-align: left;
+  flex: 2;
+}
+.share > a{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.share>div>p{
+  margin-bottom: 1em;
+}
+
+.titles {
+  flex: 1;
+  padding: .5rem;
+  height: 5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* indepth styling */
+
+td {
+  vertical-align: top;
+  /* padding: .5rem; */
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.options > a{
+  text-decoration: underline;
+  margin-left: .2em;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature >a>figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* form styling */
+.col {
+  display: flex;
+  flex-direction: column;
+}
+form>textarea, .col>textarea{
+  margin: .5em 0 .5em 0;
+  height: 3em;
+  overflow: scroll;
+  resize: none;
+  height:80%;
+}
+textarea, input {
+  max-width: 80%;
+}
+input {
+  margin: 0 .5em 0 .5em;
+}
+button {
+  margin: .5em;
+  float: right;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* phone rules */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3, select {
+        font-size: 1.4rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    h5 {
+      font-size: .5rem;
+    }
+    
+    p, td {
+        font-size: 1rem;
+    }
+
+  .banner {
+    padding: 3rem;
+  }
+
+  .side > *{
+    margin: 1rem;
+  }
+
+  .mobile {
+    height: 30vh;
+  }
+  
+  .desk {
+    width: 30vh;
+  }
+
+  .formula{
+    text-align: center;
+    margin: auto;
+  }
+
+  #desk-demo{
+    display: none;
+  }
+
+  article>div {
+    padding: 1em 0em 1em 0em;
+  }
+  body {
+    padding: .5em;
+  }
+
+  section {
+    margin: 2rem;
+  }
+
+  .slogan {
+    margin: auto;
+  }
+
+  .external {
+    flex-direction: column;
+  }
+
+  .variable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 18rem;
+    margin: .5rem;
+  }
+
+  #proto {
+    max-height: 20rem;
+    border-radius: 20px;
+  }
+
+  .share>a>figure {
+    margin: auto;
+  }
+
+  .clear {
+    display: none
+  }
+
+  .phone>h4{
+    margin-top: 1rem;
+  }
+}
+/* desktop rules */
+@media only screen and (min-width: 481px) {
+  h1 {
+      font-size: 5rem;
+  }
+  
+  h2 {
+      font-size: 3rem;
+  }
+  
+  h3 {
+      font-size: 1.7rem;
+  }
+  
+  h4, label {
+      font-size: 1.3rem;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+  }
+  
+  p, td {
+      font-size: 1.2rem;
+  }
+
+  .banner {
+    width: 55vw;
+    padding: 5em;
+  }
+
+  .side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desk {
+    width: 17rem;
+  }
+
+  .formula{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .joint {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  article>div {
+    padding: 1em 0em 1em 0em;
+  }
+
+  .slogan {
+    padding: 2em;
+    font-size: 1.3em;
+    max-width: 70vw;
+  }
+
+  .variable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 18rem;
+    margin: 1rem;
+  }
+
+  .clear> figure> .mobile {
+    height: 17rem;
+  }
+
+  .x {
+    height: 25vw;
+  }
+
+  .share {
+    margin: 3em 0em 3em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #proto {
+    border-radius: 45px;
+  }
+  
+  .display {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .phone {
+    display:none;
+  }
+
+  .feature>a{
+    margin: 0 4rem 2rem 4rem;
+  }
+
+  #mobile-demo{
+    height: 30vh;
+  }
+}
